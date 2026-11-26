@@ -10,11 +10,14 @@ All of them run in emulation: no instrument is needed.
 <!-- index:start -->
 | # | Exercise | Level | Topics | Type |
 | --- | --- | --- | --- | --- |
-| 001 | [Hahn echo timing](exercises/001_hahn_echo_timing/exercise.ipynb) ([solution](exercises/001_hahn_echo_timing/solution.ipynb)) | medium | `dsl`, `sections`, `timing`, `Gen2` | fix-the-bugs |
-| 002 | [Four frequencies on one output](exercises/002_output_router/exercise.ipynb) ([solution](exercises/002_output_router/solution.ipynb)) | advanced | `Gen2`, `SHFSG`, `output-router`, `calibration`, `device-setup` | fix-the-bugs |
-| 003 | [Readout amplitude sweep](exercises/003_readout_amplitude_sweep/exercise.ipynb) ([solution](exercises/003_readout_amplitude_sweep/solution.ipynb)) | medium | `Gen2`, `SHFQA`, `readout`, `sweeps`, `chunking` | fix-the-bugs |
 | 004 | [Chirp pulse sweep](exercises/004_chirp_pulse_sweep/exercise.ipynb) ([solution](exercises/004_chirp_pulse_sweep/solution.ipynb)) | basic | `Gen2`, `dsl`, `pulses`, `sweeps`, `chunking` | write-the-code |
+| 001 | [Hahn echo timing](exercises/001_hahn_echo_timing/exercise.ipynb) ([solution](exercises/001_hahn_echo_timing/solution.ipynb)) | medium | `dsl`, `sections`, `timing`, `Gen2` | fix-the-bugs |
+| 003 | [Readout amplitude sweep](exercises/003_readout_amplitude_sweep/exercise.ipynb) ([solution](exercises/003_readout_amplitude_sweep/solution.ipynb)) | medium | `Gen2`, `SHFQA`, `readout`, `sweeps`, `chunking` | fix-the-bugs |
+| 002 | [Four frequencies on one output](exercises/002_output_router/exercise.ipynb) ([solution](exercises/002_output_router/solution.ipynb)) | advanced | `Gen2`, `SHFSG`, `output-router`, `calibration`, `device-setup` | fix-the-bugs |
 <!-- index:end -->
+
+The exercises are listed from the easiest to the hardest, so you can do them from top to bottom.
+The number of an exercise is only its identifier and never changes.
 
 Each exercise lives in its own folder with two notebooks:
 

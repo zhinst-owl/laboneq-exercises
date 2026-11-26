@@ -30,12 +30,19 @@ def read_tags(folder):
     return notebook.metadata["exercise"]
 
 
+def difficulty(folder):
+    """Sorting key: level first (basic to expert), then exercise number."""
+    tags = read_tags(folder)
+    return (LEVELS.index(tags["level"]), tags["id"])
+
+
 def exercise_folders():
+    """Return the exercise folders, ordered from the easiest to the hardest."""
     folders = []
-    for folder in sorted((ROOT / "exercises").iterdir()):
+    for folder in (ROOT / "exercises").iterdir():
         if (folder / "exercise.ipynb").exists():
             folders.append(folder)
-    return folders
+    return sorted(folders, key=difficulty)
 
 
 def build_table():

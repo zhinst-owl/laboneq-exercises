@@ -24,7 +24,7 @@ sys.path.insert(0, str(ROOT / "tools"))
 
 import update_index  # noqa: E402
 
-FOLDERS = sorted(p.parent for p in (ROOT / "exercises").glob("*/exercise.ipynb"))
+FOLDERS = update_index.exercise_folders()
 IDS = [folder.name for folder in FOLDERS]
 
 

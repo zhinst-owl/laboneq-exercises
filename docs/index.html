@@ -51,7 +51,7 @@
 <body>
 <main>
   <h1>LabOne Q exercises</h1>
-  <p class="lead">Pick a level, a type and one or more topics. All exercises run in emulation.
+  <p class="lead">Pick a level, a type and one or more topics, or do them in order: they are sorted from the easiest to the hardest. All exercises run in emulation.
     <a id="repo">Repository and install instructions</a></p>
 
   <fieldset><legend>Level</legend><div class="chips" id="level"></div></fieldset>
@@ -94,6 +94,21 @@ const DATA = {
  ],
  "exercises": [
   {
+   "id": "004",
+   "title": "Chirp pulse sweep",
+   "level": "basic",
+   "type": "write-the-code",
+   "topics": [
+    "Gen2",
+    "dsl",
+    "pulses",
+    "sweeps",
+    "chunking"
+   ],
+   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/004_chirp_pulse_sweep/exercise.ipynb",
+   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/004_chirp_pulse_sweep/solution.ipynb"
+  },
+  {
    "id": "001",
    "title": "Hahn echo timing",
    "level": "medium",
@@ -106,21 +121,6 @@ const DATA = {
    ],
    "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/001_hahn_echo_timing/exercise.ipynb",
    "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/001_hahn_echo_timing/solution.ipynb"
-  },
-  {
-   "id": "002",
-   "title": "Four frequencies on one output",
-   "level": "advanced",
-   "type": "fix-the-bugs",
-   "topics": [
-    "Gen2",
-    "SHFSG",
-    "output-router",
-    "calibration",
-    "device-setup"
-   ],
-   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/002_output_router/exercise.ipynb",
-   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/002_output_router/solution.ipynb"
   },
   {
    "id": "003",
@@ -138,19 +138,19 @@ const DATA = {
    "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/003_readout_amplitude_sweep/solution.ipynb"
   },
   {
-   "id": "004",
-   "title": "Chirp pulse sweep",
-   "level": "basic",
-   "type": "write-the-code",
+   "id": "002",
+   "title": "Four frequencies on one output",
+   "level": "advanced",
+   "type": "fix-the-bugs",
    "topics": [
     "Gen2",
-    "dsl",
-    "pulses",
-    "sweeps",
-    "chunking"
+    "SHFSG",
+    "output-router",
+    "calibration",
+    "device-setup"
    ],
-   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/004_chirp_pulse_sweep/exercise.ipynb",
-   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/004_chirp_pulse_sweep/solution.ipynb"
+   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/002_output_router/exercise.ipynb",
+   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/002_output_router/solution.ipynb"
   }
  ]
 };
