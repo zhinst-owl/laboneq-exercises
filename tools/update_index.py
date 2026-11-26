@@ -1,10 +1,12 @@
-"""Rebuild the exercise table in README.md from the notebook tags.
+"""Rebuild the exercise table in README.md and the exercise finder page
+(docs/index.html) from the notebook tags.
 
 Run from the repository root:
 
     python tools/update_index.py
 """
 
+import json
 from pathlib import Path
 
 import nbformat
@@ -13,6 +15,10 @@ ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 START = "<!-- index:start -->"
 END = "<!-- index:end -->"
+
+FINDER = ROOT / "docs" / "index.html"
+FINDER_TEMPLATE = ROOT / "tools" / "finder_template.html"
+REPOSITORY = "https://github.com/zhinst-owl/laboneq-exercises"
 
 LEVELS = ["basic", "medium", "advanced", "expert"]
 TYPES = ["write-the-code", "fix-the-bugs", "quiz"]
@@ -24,14 +30,20 @@ def read_tags(folder):
     return notebook.metadata["exercise"]
 
 
+def exercise_folders():
+    folders = []
+    for folder in sorted((ROOT / "exercises").iterdir()):
+        if (folder / "exercise.ipynb").exists():
+            folders.append(folder)
+    return folders
+
+
 def build_table():
     lines = [
         "| # | Exercise | Level | Topics | Type |",
         "| --- | --- | --- | --- | --- |",
     ]
-    for folder in sorted((ROOT / "exercises").iterdir()):
-        if not (folder / "exercise.ipynb").exists():
-            continue
+    for folder in exercise_folders():
         tags = read_tags(folder)
         link = f"exercises/{folder.name}"
         topics = ", ".join(f"`{topic}`" for topic in tags["topics"])
@@ -50,6 +62,39 @@ def updated_readme():
     return before + START + "\n" + build_table() + "\n" + END + after
 
 
+def updated_finder():
+    """Return the finder page: the template with the exercise tags filled in."""
+    exercises = []
+    topics = []
+    for folder in exercise_folders():
+        tags = read_tags(folder)
+        link = f"{REPOSITORY}/blob/main/exercises/{folder.name}"
+        exercises.append(
+            {
+                "id": tags["id"],
+                "title": tags["title"],
+                "level": tags["level"],
+                "type": tags["type"],
+                "topics": tags["topics"],
+                "exercise_url": f"{link}/exercise.ipynb",
+                "solution_url": f"{link}/solution.ipynb",
+            }
+        )
+        for topic in tags["topics"]:
+            if topic not in topics:
+                topics.append(topic)
+    data = {
+        "repository": REPOSITORY,
+        "levels": LEVELS,
+        "types": TYPES,
+        "topics": sorted(topics, key=str.lower),
+        "exercises": exercises,
+    }
+    return FINDER_TEMPLATE.read_text().replace("/*DATA*/", json.dumps(data, indent=1))
+
+
 if __name__ == "__main__":
     README.write_text(updated_readme())
-    print("README.md index updated")
+    FINDER.parent.mkdir(exist_ok=True)
+    FINDER.write_text(updated_finder())
+    print("README.md and docs/index.html updated")

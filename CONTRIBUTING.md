@@ -3,7 +3,7 @@
 1. Copy an existing folder to `exercises/<NNN>_<short_name>/` (next free number).
 2. Edit `exercise.ipynb` and `solution.ipynb`.
 3. Set the tags in **both** notebooks (see below).
-4. Run `python tools/update_index.py` to refresh the table in the README.
+4. Run `python tools/update_index.py` to refresh the table in the README and the finder page (`docs/index.html`).
 5. Run `pytest`.
 
 ## Tags

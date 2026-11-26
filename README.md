@@ -5,6 +5,8 @@ All of them run in emulation: no instrument is needed.
 
 ## Exercises
 
+🔎 **[Exercise finder](https://zhinst-owl.github.io/laboneq-exercises/)** – filter by level, type and topic.
+
 <!-- index:start -->
 | # | Exercise | Level | Topics | Type |
 | --- | --- | --- | --- | --- |

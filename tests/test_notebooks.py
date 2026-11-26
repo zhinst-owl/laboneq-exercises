@@ -72,3 +72,7 @@ def test_exercise_fails_only_where_expected(folder):
 
 def test_readme_index_is_up_to_date():
     assert update_index.README.read_text() == update_index.updated_readme()
+
+
+def test_finder_page_is_up_to_date():
+    assert update_index.FINDER.read_text() == update_index.updated_finder()
