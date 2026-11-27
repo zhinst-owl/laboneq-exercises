@@ -1,10 +1,20 @@
 # Adding an exercise
 
-1. Copy an existing folder to `exercises/<NNN>_<short_name>/` (next free number).
+1. Copy an existing folder to `exercises/<NNN>_<short_name>/` and choose the number (see below).
 2. Edit `exercise.ipynb` and `solution.ipynb`.
 3. Set the tags in **both** notebooks (see below).
 4. Run `python tools/update_index.py` to refresh the table in the README and the finder page (`docs/index.html`).
 5. Run `pytest`.
+
+## Choosing the number
+
+The number gives the position of the exercise, from the easiest to the hardest.
+
+- First digit: the level. `1` basic, `2` medium, `3` advanced, `4` expert.
+- Other two digits: the position inside the level, lower is easier.
+- Leave gaps. Harder than everything in the level: last number + 10 (`120` → `130`).
+  Between two exercises: a number in between (`115` between `110` and `120`).
+- Never renumber an existing exercise.
 
 ## Tags
 
@@ -13,7 +23,7 @@ The tags are stored in the notebook metadata
 
 ```json
 "exercise": {
-    "id": "001",
+    "id": "210",
     "title": "Hahn echo timing",
     "level": "medium",
     "topics": ["dsl", "sections", "timing", "Gen2"],
@@ -23,7 +33,6 @@ The tags are stored in the notebook metadata
 ```
 
 - `level`: `basic`, `medium`, `advanced` or `expert`
-- `order` (optional): position inside the level, lower comes first. Without it (default 100) exercises of the same level are sorted by number.
 - `type`: `write-the-code`, `fix-the-bugs` or `quiz`
 - `topics`: free list, reuse the existing ones when possible
 - `source`: where the idea comes from (quiz, support case, ...). **No customer names or case details.**

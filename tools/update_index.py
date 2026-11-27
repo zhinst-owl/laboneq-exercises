@@ -31,10 +31,9 @@ def read_tags(folder):
 
 
 def difficulty(folder):
-    """Sorting key: level first (basic to expert), then the optional `order`
-    tag (lower comes first, default 100), then exercise number."""
-    tags = read_tags(folder)
-    return (LEVELS.index(tags["level"]), tags.get("order", 100), tags["id"])
+    """Sorting key: the exercise number. Its first digit is the level
+    (1 basic, 2 medium, 3 advanced, 4 expert), so the numbers follow the difficulty."""
+    return read_tags(folder)["id"]
 
 
 def exercise_folders():

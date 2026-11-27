@@ -49,6 +49,9 @@ def test_tags(folder):
     tags = update_index.read_tags(folder)
     assert folder.name.startswith(tags["id"] + "_")
     assert tags["level"] in update_index.LEVELS
+    # The first digit of the number is the level: 1 basic, 2 medium, ...
+    assert len(tags["id"]) == 3
+    assert int(tags["id"][0]) == update_index.LEVELS.index(tags["level"]) + 1
     assert tags["type"] in update_index.TYPES
     assert len(tags["topics"]) > 0
     solution = nbformat.read(folder / "solution.ipynb", as_version=4)
