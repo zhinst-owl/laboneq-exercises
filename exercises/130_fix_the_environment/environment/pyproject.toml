@@ -1,0 +1,16 @@
+[project]
+name = "exercise-130-environment"
+version = "0.1.0"
+description = "The environment of exercise 130. Something is wrong with it."
+requires-python = ">=3.10"
+dependencies = [
+    "laboneq==26.10.1",
+    "laboneq_applications==26.7.0b1",
+    "matplotlib",
+    "jupyterlab",
+    "ipykernel",
+]
+
+[tool.uv]
+prerelease = "allow"
+override-dependencies = ["laboneq==26.10.1"]

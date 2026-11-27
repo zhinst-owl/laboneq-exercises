@@ -78,22 +78,30 @@ const DATA = {
   "quiz"
  ],
  "topics": [
+  "applications-library",
+  "automation",
   "calibration",
   "chunking",
   "device-setup",
   "dsl",
+  "environment",
   "flux",
   "Gen2",
+  "HDAWG",
+  "installation",
   "markers",
   "output-router",
   "pulses",
+  "quantum-operations",
   "readout",
   "sections",
   "SHFQA",
   "SHFQC",
   "SHFSG",
+  "spectroscopy",
   "sweeps",
-  "timing"
+  "timing",
+  "workflow"
  ],
  "exercises": [
   {
@@ -129,6 +137,21 @@ const DATA = {
    "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/120_chirp_pulse_sweep/solution.ipynb"
   },
   {
+   "id": "130",
+   "title": "Fix the environment",
+   "level": "basic",
+   "type": "fix-the-bugs",
+   "topics": [
+    "environment",
+    "installation",
+    "applications-library",
+    "HDAWG",
+    "flux"
+   ],
+   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/130_fix_the_environment/exercise.ipynb",
+   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/130_fix_the_environment/solution.ipynb"
+  },
+  {
    "id": "210",
    "title": "Hahn echo timing",
    "level": "medium",
@@ -158,6 +181,23 @@ const DATA = {
    "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/220_readout_amplitude_sweep/solution.ipynb"
   },
   {
+   "id": "230",
+   "title": "e-f Rabi on a shared drive port",
+   "level": "medium",
+   "type": "write-the-code",
+   "topics": [
+    "Gen2",
+    "SHFQC",
+    "dsl",
+    "sections",
+    "timing",
+    "calibration",
+    "sweeps"
+   ],
+   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/230_ef_rabi_shared_port/exercise.ipynb",
+   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/230_ef_rabi_shared_port/solution.ipynb"
+  },
+  {
    "id": "310",
    "title": "Four frequencies on one output",
    "level": "advanced",
@@ -171,6 +211,37 @@ const DATA = {
    ],
    "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/310_output_router/exercise.ipynb",
    "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/310_output_router/solution.ipynb"
+  },
+  {
+   "id": "320",
+   "title": "e-f Rabi as a workflow",
+   "level": "advanced",
+   "type": "write-the-code",
+   "topics": [
+    "Gen2",
+    "SHFQC",
+    "workflow",
+    "quantum-operations",
+    "applications-library",
+    "sweeps"
+   ],
+   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/320_ef_rabi_workflow/exercise.ipynb",
+   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/320_ef_rabi_workflow/solution.ipynb"
+  },
+  {
+   "id": "330",
+   "title": "Find the qubit: widening the search window",
+   "level": "advanced",
+   "type": "write-the-code",
+   "topics": [
+    "automation",
+    "workflow",
+    "applications-library",
+    "spectroscopy",
+    "sweeps"
+   ],
+   "exercise_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/330_peak_search_automation/exercise.ipynb",
+   "solution_url": "https://github.com/zhinst-owl/laboneq-exercises/blob/main/exercises/330_peak_search_automation/solution.ipynb"
   }
  ]
 };
