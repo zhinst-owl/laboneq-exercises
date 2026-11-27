@@ -16,9 +16,12 @@ All of them run in emulation: no instrument is needed.
 | 210 | [Hahn echo timing](exercises/210_hahn_echo_timing/exercise.ipynb) ([solution](exercises/210_hahn_echo_timing/solution.ipynb)) | medium | `dsl`, `sections`, `timing`, `Gen2` | fix-the-bugs |
 | 220 | [Readout amplitude sweep](exercises/220_readout_amplitude_sweep/exercise.ipynb) ([solution](exercises/220_readout_amplitude_sweep/solution.ipynb)) | medium | `Gen2`, `SHFQA`, `readout`, `sweeps`, `chunking` | fix-the-bugs |
 | 230 | [e-f Rabi on a shared drive port](exercises/230_ef_rabi_shared_port/exercise.ipynb) ([solution](exercises/230_ef_rabi_shared_port/solution.ipynb)) | medium | `Gen2`, `SHFQC`, `dsl`, `sections`, `timing`, `calibration`, `sweeps` | write-the-code |
+| 240 | [Same readout pulse, different phase](exercises/240_readout_phase/exercise.ipynb) ([solution](exercises/240_readout_phase/solution.ipynb)) | medium | `Gen2`, `SHFQA`, `readout`, `phase`, `device-setup`, `calibration` | fix-the-bugs |
+| 250 | [A continuous wave inside an experiment](exercises/250_cw_frequency_sweep/exercise.ipynb) ([solution](exercises/250_cw_frequency_sweep/solution.ipynb)) | medium | `Gen2`, `SHFQC`, `dsl`, `pulses`, `sweeps`, `spectroscopy`, `calibration` | write-the-code |
 | 310 | [Four frequencies on one output](exercises/310_output_router/exercise.ipynb) ([solution](exercises/310_output_router/solution.ipynb)) | advanced | `Gen2`, `SHFSG`, `output-router`, `calibration`, `device-setup` | fix-the-bugs |
 | 320 | [e-f Rabi as a workflow](exercises/320_ef_rabi_workflow/exercise.ipynb) ([solution](exercises/320_ef_rabi_workflow/solution.ipynb)) | advanced | `Gen2`, `SHFQC`, `workflow`, `quantum-operations`, `applications-library`, `sweeps` | write-the-code |
 | 330 | [Find the qubit: widening the search window](exercises/330_peak_search_automation/exercise.ipynb) ([solution](exercises/330_peak_search_automation/solution.ipynb)) | advanced | `automation`, `workflow`, `applications-library`, `spectroscopy`, `sweeps` | write-the-code |
+| 340 | [Resonator spectroscopy in parallel](exercises/340_parallel_resonator_spectroscopy/exercise.ipynb) ([solution](exercises/340_parallel_resonator_spectroscopy/solution.ipynb)) | advanced | `Gen2`, `SHFQA`, `spectroscopy`, `readout`, `sweeps`, `calibration` | fix-the-bugs |
 <!-- index:end -->
 
 The exercises are listed from the easiest to the hardest, so you can do them from top to bottom.
@@ -47,8 +50,8 @@ They are shown at the top of the notebook and in the table above.
 | `fix-the-bugs` | The notebook looks complete, but fails or gives the wrong result |
 | `quiz` | Questions to answer, little or no code to write |
 
-Topics in use: `Gen2`, `dsl`, `sections`, `timing`, `pulses`, `sweeps`, `chunking`, `readout`, `calibration`, `device-setup`, `SHFSG`, `SHFQA`, `SHFQC`, `HDAWG`, `flux`, `markers`, `output-router`, `workflow`, `quantum-operations`, `applications-library`, `automation`, `spectroscopy`, `environment`, `installation`.
-Planned: `phase`, `feedback`, `openqasm`, `ZQCS`.
+Topics in use: `Gen2`, `dsl`, `sections`, `timing`, `pulses`, `sweeps`, `chunking`, `readout`, `calibration`, `device-setup`, `SHFSG`, `SHFQA`, `SHFQC`, `HDAWG`, `flux`, `markers`, `output-router`, `workflow`, `quantum-operations`, `applications-library`, `automation`, `spectroscopy`, `environment`, `installation`, `phase`.
+Planned: `feedback`, `openqasm`, `ZQCS`.
 
 ## Install
 
