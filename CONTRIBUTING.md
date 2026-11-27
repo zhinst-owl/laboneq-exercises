@@ -23,6 +23,7 @@ The tags are stored in the notebook metadata
 ```
 
 - `level`: `basic`, `medium`, `advanced` or `expert`
+- `order` (optional): position inside the level, lower comes first. Without it (default 100) exercises of the same level are sorted by number.
 - `type`: `write-the-code`, `fix-the-bugs` or `quiz`
 - `topics`: free list, reuse the existing ones when possible
 - `source`: where the idea comes from (quiz, support case, ...). **No customer names or case details.**
